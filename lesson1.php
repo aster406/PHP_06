@@ -29,12 +29,12 @@ class Person{
         $this->gender = $gender;
     }
 
-    public function selfintroduction() : string
+    public function selfintroduction()
     {
         return "私の名前は".$this->name."です。年齢は".$this->age."歳です。性別は".$this->gender."です。";
     }
 
-    public function addAge() : void
+    public function addAge()
     {
         echo "2度、誕生日が来ました。";
         $this->age = $this->age +2; //+1の場合++だと反応しない
