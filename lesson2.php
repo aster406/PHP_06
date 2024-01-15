@@ -54,37 +54,18 @@ class Patient extends Person{
         return $this->height;
     }
 
-    public function setHeight($height) 
-    {
-        $this->height = $height;
-    }
-
     public function getWeight()
     {
         return $this->weight;
     }
 
-    public function setWeight($weight) 
-    {
-        $this->weight = $weight;
-    }
-
     public function self_introduction(){
-        return $this->name."さんの身長は".$this->height."mなので平均体重は".round($this->standardWeight)."kgです。現在の体重は".$this->weight."kgです。";
+        return $this->name."さんの身長は".$this->getHeight()."mなので平均体重は".round($this->calculateStandardWeight())."kgです。現在の体重は".$this->getWeight()."kgです。";
     }
 
 }
 
 $Luffy = new Patient('ルフィ', 17, '男性', 1.72, 47);
-
-$Luffy->calculateStandardWeight();
-echo $Luffy->self_introduction()."<br/>";
-
-$Luffy->setHeight(1.74);
-$Luffy->getHeight();
-$Luffy->setWeight(55);
-$Luffy->getWeight();
-$Luffy->calculateStandardWeight();
 echo $Luffy->self_introduction()."<br/>";
 
 ?>
