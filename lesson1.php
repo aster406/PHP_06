@@ -36,8 +36,8 @@ class Person{
 
     public function addAge()
     {
-        echo "2度、誕生日が来ました。";
-        $this->age = $this->age +2; //+1の場合++だと反応しない
+        echo "誕生日が来ました。";
+        $this->age = $this->age +1; //+1の場合++だと反応しない
     }
 }
 
